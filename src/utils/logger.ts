@@ -12,19 +12,19 @@ Colors.enable();
 
 export const LOGGER = {
     Log: function (log: string): void {
-        config.log_print_power && console.log(log)
-        config.log_save_power && UTILS.SaveLog(log)
+        config.LOG_PRINT_POWER && console.log(log)
+        config.LOG_SAVE_POWER && UTILS.SaveLog(log)
     },
     Err: function (log: string): void {
-        config.log_print_power && console.log(log.error)
-        config.log_save_power && UTILS.SaveLog(log)
+        config.LOG_PRINT_POWER && console.log(log.error)
+        config.LOG_SAVE_POWER && UTILS.SaveLog(log)
     },
     Warn: function (log: string): void {
-        config.log_print_power && console.log(log.warning)
-        config.log_save_power && UTILS.SaveLog(log)
+        config.LOG_PRINT_POWER && console.log(log.warning)
+        config.LOG_SAVE_POWER && UTILS.SaveLog(log)
     },
     Succ: function (log: string): void {
-        config.log_print_power && console.log(log.green)
-        config.log_save_power && UTILS.SaveLog(log)
+        config.LOG_PRINT_POWER && console.log(log.green)
+        config.LOG_SAVE_POWER && UTILS.SaveLog(log)
     }
 }

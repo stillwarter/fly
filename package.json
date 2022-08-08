@@ -21,6 +21,7 @@
   "homepage": "https://github.com/rLingMX/fly#readme",
   "devDependencies": {
     "@types/node": "^18.6.4",
-    "colors.ts": "^1.0.20"
+    "colors.ts": "^1.0.20",
+    "mysqls": "^1.2.2"
   }
 }
