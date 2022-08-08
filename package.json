@@ -1,0 +1,26 @@
+{
+  "name": "fly",
+  "version": "0.0.1",
+  "description": "择日飞升文字游戏",
+  "main": "./dest/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rLingMX/fly.git"
+  },
+  "keywords": [
+    "文字游戏"
+  ],
+  "author": "Yui",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rLingMX/fly/issues"
+  },
+  "homepage": "https://github.com/rLingMX/fly#readme",
+  "devDependencies": {
+    "@types/node": "^18.6.4",
+    "colors.ts": "^1.0.20"
+  }
+}
