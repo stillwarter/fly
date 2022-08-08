@@ -3,4 +3,4 @@ import { LOGGER } from './utils/logger';
 
 // console.log(`道历：${UTILS.GetDaoTime()}年`)
 // LOGGER.Warn("test")
-UTILS.SaveLog('hha')
+LOGGER.Log("Server Test！")

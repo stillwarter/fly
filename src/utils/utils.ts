@@ -5,8 +5,7 @@
  * Modified on：2022年8月8日
  */
 import { config } from '../config/config'
-import { LOGGER } from './logger';
-import { accessSync, constants, mkdirSync, appendFile } from 'fs';
+import { accessSync, constants, mkdirSync, appendFileSync } from 'fs';
 
 export const UTILS = {
     /**
@@ -29,12 +28,8 @@ export const UTILS = {
             mkdirSync(config.log_save_path);
         }
         // 添加日志到文件
-        let logData = this.formatDate(new Date(), 'yyyy-MM-dd HH:mm:ss') + ": " + log;
-        appendFile(config.log_save_path + "/" + this.formatDate(new Date(), 'yyyyMMdd') + ".txt", logData, function (err) {
-            LOGGER.Err(JSON.stringify(err))
-        })
-
-        LOGGER.Log(config.log_save_path)
+        let logData = this.formatDate(new Date(), 'yyyy-MM-dd HH:mm:ss') + ": " + log + "\n";
+        appendFileSync(config.log_save_path + "/" + this.formatDate(new Date(), 'yyyyMMdd') + ".txt", logData)
     },
     formatDate: function (strDate: any, strFormat?: any) {
         if (!strDate) { return; }

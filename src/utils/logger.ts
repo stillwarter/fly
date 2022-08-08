@@ -6,21 +6,25 @@
  */
 import Colors = require('colors.ts');
 import { config } from "../config/config";
+import { UTILS } from "./utils"
 
 Colors.enable();
 
 export const LOGGER = {
     Log: function (log: string): void {
         config.log_print_power && console.log(log)
-        // config.log_save_power &
+        config.log_save_power && UTILS.SaveLog(log)
     },
     Err: function (log: string): void {
         config.log_print_power && console.log(log.error)
+        config.log_save_power && UTILS.SaveLog(log)
     },
     Warn: function (log: string): void {
         config.log_print_power && console.log(log.warning)
+        config.log_save_power && UTILS.SaveLog(log)
     },
     Succ: function (log: string): void {
         config.log_print_power && console.log(log.green)
+        config.log_save_power && UTILS.SaveLog(log)
     }
 }
